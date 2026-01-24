@@ -129,6 +129,12 @@
     box-shadow: 0 5px 15px rgba(var(--accent-rgb), 0.4);
 }
 
+/* 기본적으로 모바일 요소 숨김 */
+.mobileMenuBtn,
+.mobileNav {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .nav {
         display: none;
