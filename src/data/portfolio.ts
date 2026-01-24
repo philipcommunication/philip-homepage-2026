@@ -1,0 +1,17 @@
+export const portfolioItems = [
+    { id: 1, name: "아주디자인그룹", category: "공식광고 대행", img: "/portfolio/1.png" },
+    { id: 2, name: "하이트진로", category: "공식광고 대행", img: "/portfolio/6.png" },
+    { id: 3, name: "OSSE", category: "바이럴광고 대행", img: "/portfolio/15.png" },
+    { id: 4, name: "코오롱제약", category: "공식광고/바이럴광고 대행", img: "/portfolio/13.png" },
+    { id: 5, name: "두나무", category: "바이럴광고 대행", img: "/portfolio/16.png" },
+    { id: 6, name: "DUFT&DOFT", category: "공식광고 대행", img: "/portfolio/2.png" },
+    { id: 7, name: "쥬비스 다이어트", category: "공식광고 대행", img: "/portfolio/3.png" },
+    { id: 8, name: "블랭크코퍼레이션", category: "바이럴광고 대행", img: "/portfolio/4.png" },
+    { id: 9, name: "ABKO", category: "바이럴광고 대행", img: "/portfolio/5.png" },
+    { id: 10, name: "FLO", category: "바이럴광고 대행", img: "/portfolio/7.png" },
+    { id: 11, name: "Humanscape", category: "바이럴광고 대행", img: "/portfolio/8.png" },
+    { id: 12, name: "피지컬갤러리", category: "공식광고 대행", img: "/portfolio/9.png" },
+    { id: 13, name: "헬스핼퍼", category: "바이럴광고 대행", img: "/portfolio/10.png" },
+    { id: 14, name: "템플레깅스", category: "바이럴광고 대행", img: "/portfolio/11.png" },
+    { id: 15, name: "아스모디", category: "바이럴광고 대행", img: "/portfolio/17.png" },
+];

@@ -1,0 +1,2 @@
+﻿- Focus on KPIs and measurable outcomes.
+- Use concise tables or bullet points.

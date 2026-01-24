@@ -1,0 +1,132 @@
+.adminLayout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f7f6;
+    color: #333;
+}
+
+.sidebar {
+    width: 260px;
+    background: #1d3557;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.adminTitle {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.adminNav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.adminNav button {
+    text-align: left;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.adminNav button:hover,
+.adminNav button.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.adminMain {
+    flex: 1;
+    padding: 2rem 4rem;
+}
+
+.adminHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.adminHeader h1 {
+    font-size: 1.2rem;
+    color: #666;
+    letter-spacing: 0.1em;
+}
+
+.adminContent {
+    background: #fff;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.editCard h3 {
+    margin-bottom: 1rem;
+}
+
+.info {
+    color: #888;
+    margin-bottom: 2.5rem;
+}
+
+.formGroup {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 15px;
+}
+
+.formGroup label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.fileInput {
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.textarea {
+    width: 100%;
+    height: 120px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    margin-bottom: 1.5rem;
+}
+
+.saveBtn {
+    background: #1d3557;
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.placeholder {
+    text-align: center;
+    padding: 10rem 0;
+    color: #aaa;
+}

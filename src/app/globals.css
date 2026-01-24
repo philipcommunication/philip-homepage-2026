@@ -1,0 +1,290 @@
+/* Default Theme (Version 1: Classic & Trust - Light) */
+:root {
+  --background: #FFFFFF;
+  --background-alt: #F8F9FA;
+  --foreground: #1D3557;
+  --text-muted: #457B9D;
+  --accent: #E63946;
+  --accent-rgb: 230, 57, 70;
+  --secondary: #F4A261;
+  --nav-link: rgba(29, 53, 87, 0.7);
+  --logo-gradient: linear-gradient(90deg, #1D3557, #E63946);
+  --glass-bg: rgba(29, 53, 87, 0.05);
+  --glass-border: rgba(29, 53, 87, 0.1);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --hero-overlay: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.2) 100%);
+  --card-bg: #FFFFFF;
+}
+
+/* Theme 2, 3, 4, 5, 6 configs ... (OMITTED for brevity in thought, but must include in write) */
+[data-theme='theme2'] {
+  --background: #FFFFFF;
+  --background-alt: #F5F7F6;
+  --foreground: #212529;
+  --text-muted: #495057;
+  --accent: #2A9D8F;
+  --accent-rgb: 42, 157, 143;
+  --secondary: #264653;
+  --highlight: #E9C46A;
+  --nav-link: rgba(33, 37, 41, 0.7);
+  --logo-gradient: linear-gradient(90deg, #212529, #2A9D8F);
+  --glass-bg: rgba(42, 157, 143, 0.05);
+  --glass-border: rgba(42, 157, 143, 0.1);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --hero-overlay: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.2) 100%);
+  --card-bg: #FFFFFF;
+}
+
+[data-theme='theme3'] {
+  --background: #000000;
+  --background-alt: #0D0D0D;
+  --foreground: #FFFFFF;
+  --text-muted: #C0C0C0;
+  --accent: #FF4D00;
+  --accent-rgb: 255, 77, 0;
+  --secondary: #C0C0C0;
+  --nav-link: rgba(255, 255, 255, 0.7);
+  --logo-gradient: linear-gradient(90deg, #FFFFFF, #FF4D00);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --header-bg: rgba(0, 0, 0, 0.8);
+  --hero-overlay: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+  --card-bg: #111111;
+}
+
+[data-theme='theme4'] {
+  --background: rgb(15, 28, 46);
+  --background-alt: rgb(28, 43, 58);
+  --foreground: rgb(245, 241, 232);
+  --text-muted: rgb(176, 176, 176);
+  --accent: rgb(47, 107, 79);
+  --accent-hover: rgb(46, 111, 126);
+  --accent-rgb: 47, 107, 79;
+  --secondary: rgb(184, 115, 51);
+  --nav-link: rgba(245, 241, 232, 0.7);
+  --logo-gradient: linear-gradient(90deg, rgb(245, 241, 232), rgb(47, 107, 79));
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --header-bg: rgba(15, 28, 46, 0.8);
+  --hero-overlay: linear-gradient(to right, rgba(15, 28, 46, 0.95) 0%, rgba(15, 28, 46, 0.5) 50%, rgba(15, 28, 46, 0.2) 100%);
+  --card-bg: rgb(28, 43, 58);
+}
+
+[data-theme='theme5'] {
+  --background: rgb(245, 241, 232);
+  --background-alt: rgba(176, 176, 176, 0.1);
+  --foreground: rgb(15, 28, 46);
+  --text-main: rgb(30, 30, 30);
+  --text-muted: rgb(30, 30, 30);
+  --accent: rgb(47, 107, 79);
+  --accent-hover: rgb(46, 111, 126);
+  --accent-rgb: 47, 107, 79;
+  --secondary: rgb(184, 115, 51);
+  --nav-link: rgb(245, 241, 232);
+  --logo-gradient: linear-gradient(90deg, rgb(245, 241, 232), rgb(184, 115, 51));
+  --glass-bg: rgba(245, 241, 232, 0.05);
+  --glass-border: rgba(176, 176, 176, 0.5);
+  --header-bg: rgb(28, 43, 58);
+  --hero-overlay: linear-gradient(to right, rgba(28, 43, 58, 0.8) 0%, rgba(28, 43, 58, 0.4) 50%, rgba(28, 43, 58, 0.1) 100%);
+  --card-bg: #FFFFFF;
+  --footer-bg: rgb(28, 43, 58);
+  --footer-text: rgb(245, 241, 232);
+}
+
+[data-theme='theme6'] {
+  --background: rgb(245, 241, 232);
+  --background-alt: rgba(176, 176, 176, 0.1);
+  --foreground: rgb(15, 28, 46);
+  --text-main: rgb(30, 30, 30);
+  --text-muted: rgb(30, 30, 30);
+  --accent: rgb(47, 107, 79);
+  --accent-hover: rgb(46, 111, 126);
+  --accent-rgb: 47, 107, 79;
+  --secondary: rgb(184, 115, 51);
+  --nav-link: rgb(245, 241, 232);
+  --logo-gradient: linear-gradient(90deg, rgb(245, 241, 232), rgb(184, 115, 51));
+  --glass-bg: rgba(245, 241, 232, 0.05);
+  --glass-border: rgba(176, 176, 176, 0.5);
+  --header-bg: rgb(28, 43, 58);
+  --hero-overlay: transparent;
+  --card-bg: #FFFFFF;
+  --footer-bg: rgb(28, 43, 58);
+  --footer-text: rgb(245, 241, 232);
+}
+
+[data-theme='theme6'] .heroImage {
+  display: none !important;
+}
+
+[data-theme='theme6'] [class*="Hero_hero"] {
+  height: 60vh !important;
+  background: var(--background);
+}
+
+[data-theme='theme6'] [class*="Hero_mainTitle"] span:last-child {
+  background: linear-gradient(90deg, var(--foreground), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Version 7: Hybrid (V4 Base + V5 Accents for Why & Services) */
+[data-theme='theme7'] {
+  --background: rgb(15, 28, 46);
+  --background-alt: rgb(28, 43, 58);
+  --foreground: rgb(245, 241, 232);
+  --text-muted: rgb(176, 176, 176);
+  --accent: rgb(47, 107, 79);
+  --accent-hover: rgb(46, 111, 126);
+  --accent-rgb: 47, 107, 79;
+  --secondary: rgb(184, 115, 51);
+  --nav-link: rgba(245, 241, 232, 0.7);
+  --logo-gradient: linear-gradient(90deg, rgb(245, 241, 232), rgb(47, 107, 79));
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --header-bg: rgba(15, 28, 46, 0.8);
+  --hero-overlay: linear-gradient(to right, rgba(15, 28, 46, 0.95) 0%, rgba(15, 28, 46, 0.5) 50%, rgba(15, 28, 46, 0.2) 100%);
+  --card-bg: rgb(28, 43, 58);
+}
+
+/* V7 Reliable Theme Overrides */
+[data-theme='theme7'] .v7-ivory-section {
+  background-color: rgb(245, 241, 232) !important;
+}
+
+[data-theme='theme7'] .v7-white-section {
+  background-color: #FFFFFF !important;
+}
+
+[data-theme='theme7'] .v7-ivory-section,
+[data-theme='theme7'] .v7-white-section {
+  color: rgb(15, 28, 46) !important;
+}
+
+[data-theme='theme7'] .v7-ivory-section h1,
+[data-theme='theme7'] .v7-ivory-section h2,
+[data-theme='theme7'] .v7-ivory-section h3,
+[data-theme='theme7'] .v7-ivory-section p,
+[data-theme='theme7'] .v7-ivory-section span,
+[data-theme='theme7'] .v7-white-section h1,
+[data-theme='theme7'] .v7-white-section h2,
+[data-theme='theme7'] .v7-white-section h3,
+[data-theme='theme7'] .v7-white-section p,
+[data-theme='theme7'] .v7-white-section span {
+  color: rgb(15, 28, 46) !important;
+}
+
+/* V7 Card Styles - Refined to target only container cards */
+[data-theme='theme7'] .v7-ivory-section [class*="_card"],
+[data-theme='theme7'] .v7-white-section [class*="_card"] {
+  background-color: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+[data-theme='theme7'] .v7-ivory-section [class*="_card"]:hover,
+[data-theme='theme7'] .v7-white-section [class*="_card"]:hover {
+  border-color: var(--accent) !important;
+  background-color: rgba(var(--accent-rgb), 0.05) !important;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Specific fix for elements that were accidentally getting card borders */
+[data-theme='theme7'] [class*="cardHeader"],
+[data-theme='theme7'] [class*="cardTitle"],
+[data-theme='theme7'] [class*="cardDesc"],
+[data-theme='theme7'] [class*="cardOverlay"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Reference Overlay fix - restore its intended gradient */
+[data-theme='theme7'] [class*="Reference-module"][class*="cardOverlay"] {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 60%) !important;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Abstract Background Elements */
+.glow-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glow-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+}
+
+.glow-1 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent);
+  top: -100px;
+  right: -100px;
+}
+
+.glow-2 {
+  width: 400px;
+  height: 400px;
+  background: #7000ff;
+  bottom: -50px;
+  left: -50px;
+}

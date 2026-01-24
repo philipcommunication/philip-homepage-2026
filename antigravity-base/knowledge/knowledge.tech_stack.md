@@ -1,0 +1,4 @@
+﻿- Frontend
+- Backend
+- Database
+- Infrastructure / CI-CD

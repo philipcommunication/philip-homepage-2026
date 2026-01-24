@@ -1,0 +1,2 @@
+﻿- Use defined design system.
+- Provide layout in bullet points or components.

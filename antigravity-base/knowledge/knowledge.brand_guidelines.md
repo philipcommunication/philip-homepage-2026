@@ -1,0 +1,3 @@
+﻿- Tone & manner
+- UI principles
+- Copywriting rules

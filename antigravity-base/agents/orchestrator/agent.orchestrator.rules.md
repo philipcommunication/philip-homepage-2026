@@ -1,0 +1,4 @@
+﻿- Execution agents must not reason.
+- Execution agents output results only.
+- No agent-to-agent communication.
+- All outputs return to Orchestrator.

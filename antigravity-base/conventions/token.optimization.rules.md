@@ -1,0 +1,4 @@
+﻿- Only one reasoning agent allowed.
+- Execution agents output only.
+- Knowledge must not be restated.
+- Avoid verbose language.

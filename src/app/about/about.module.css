@@ -1,0 +1,249 @@
+.hero {
+    padding: 12rem 0 6rem;
+    background: var(--background-alt);
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+.section {
+    padding: 8rem 0;
+}
+
+.altBg {
+    background: var(--background-alt);
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.singleGrid {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.itemTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1.5rem;
+}
+
+.ciBox {
+    padding: 3rem;
+    border-radius: 24px;
+    background: var(--card-bg);
+}
+
+.logoPreview {
+    margin-bottom: 2rem;
+    padding: 3rem;
+    background: var(--background-alt);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoPreview svg {
+    max-width: 240px;
+    width: 100%;
+}
+
+.mapBox {
+    padding: 3rem;
+    border-radius: 24px;
+    background: var(--card-bg);
+}
+
+.locationContent {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.mapVisual {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--background-alt);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.directionsInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.directionsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.directionsTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0;
+}
+
+.directionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.directionsList p {
+    margin: 0;
+}
+
+.tagWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.locationTag {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.locationTag:hover {
+    background: rgba(var(--accent-rgb), 0.1);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+@keyframes pounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timelineItem {
+    display: flex;
+    gap: 3rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.year {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    min-width: 100px;
+}
+
+.event {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .locationContent {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mapVisual {
+        aspect-ratio: 16 / 9;
+        /* 모바일에서는 가로가 더 긴 형태가 보기 편함 */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .itemTitle {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .ciBox {
+        padding: 1.5rem;
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .logoPreview {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .logoPreview img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .ciDesc {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}

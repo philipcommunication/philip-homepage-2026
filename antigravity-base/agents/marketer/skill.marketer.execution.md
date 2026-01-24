@@ -1,0 +1,2 @@
+﻿- Follow brand tone.
+- Optimize for clarity and conversion.

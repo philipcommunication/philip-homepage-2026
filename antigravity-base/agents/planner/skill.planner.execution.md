@@ -1,0 +1,2 @@
+﻿- Focus on functional scope.
+- Define requirements clearly and concisely.

@@ -1,0 +1,3 @@
+﻿- Follow provided architecture.
+- Use defined tech stack.
+- Respect naming conventions.

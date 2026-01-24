@@ -1,0 +1,229 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+    height: 70px;
+    background: var(--header-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.headerInner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.logoImage {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.scrolled .logoImage {
+    height: 40px;
+}
+
+.logoText {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    color: var(--foreground);
+    background: var(--logo-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.navLink {
+    font-family: var(--font-noto-sans), sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--nav-link);
+}
+
+.navLink:hover {
+    color: var(--accent);
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #fff;
+    min-width: 180px;
+    border-radius: 12px;
+    padding: 0.8rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--glass-border);
+    z-index: 1001;
+}
+
+.dropdown:hover .dropdownMenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdownItem {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.dropdownItem:hover {
+    background: var(--background-alt);
+    color: var(--accent);
+}
+
+.contactBtn {
+    background: var(--accent);
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(var(--accent-rgb), 0.4);
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .bar {
+        width: 100%;
+        height: 3px;
+        background: var(--foreground);
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    .mobileMenuBtn.active .bar:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+    }
+
+    .mobileMenuBtn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobileMenuBtn.active .bar:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+    }
+
+    .mobileNav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 2rem;
+    }
+
+    .mobileNav.active {
+        right: 0;
+    }
+
+    .mobileNavLink {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--foreground);
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .mobileMenuWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobileSubMenu {
+        width: 100%;
+        display: none;
+        /* 기본적으로 숨김 */
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 0.5rem 0 1rem;
+        background: rgba(0, 0, 0, 0.02);
+        border-radius: 12px;
+    }
+
+    .mobileSubMenu.open {
+        display: flex;
+        /* 토글 시 노출 */
+    }
+
+    .mobileSubLink {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+}

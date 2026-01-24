@@ -1,0 +1,106 @@
+.hero {
+    padding: 12rem 0 6rem;
+    background: var(--background-alt);
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+}
+
+.contentSection {
+    padding: 8rem 0;
+}
+
+.collabItem {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 8rem;
+}
+
+.collabItem.reverse {
+    flex-direction: row-reverse;
+}
+
+.imageBox {
+    flex: 1;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.textBox {
+    flex: 1;
+}
+
+.itemTitle {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.itemDesc {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.applyBtn {
+    background: var(--accent);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.applyBtn:hover {
+    background: var(--accent-hover, var(--accent));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(var(--accent-rgb), 0.3);
+}
+
+.applyBtn.disabled {
+    background: #ccc;
+    color: #fff;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.applyBtn.disabled:hover {
+    background: #ccc;
+    transform: none;
+    box-shadow: none;
+}
+
+@media (max-width: 968px) {
+
+    .collabItem,
+    .collabItem.reverse {
+        flex-direction: column;
+        gap: 2.5rem;
+        margin-bottom: 6rem;
+    }
+
+    .imageBox {
+        width: 100%;
+    }
+
+    .itemTitle {
+        font-size: 1.8rem;
+    }
+}

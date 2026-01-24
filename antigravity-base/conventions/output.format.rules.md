@@ -1,0 +1,3 @@
+﻿- Prefer bullet points, tables, or code blocks.
+- Avoid long prose.
+- Output only what is requested.

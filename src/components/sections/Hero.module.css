@@ -1,0 +1,173 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.imageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--hero-overlay);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    opacity: 0;
+}
+
+.active .content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.subTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.mainTitle {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+    color: #111;
+    /* 기존 대비 명도를 낮추어 훨씬 짙게 변경 */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    /* 미묘한 그림자로 가독성 향상 */
+}
+
+.mainTitle span {
+    display: inline-block;
+}
+
+.description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: var(--foreground);
+    margin-bottom: 3.5rem;
+    max-width: 600px;
+    opacity: 0.8;
+}
+
+.profile {
+    padding: 1.2rem 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: fit-content;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    /* 흰 공백 제거를 위해 배경 투명화 */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* 테두리와 그림자 완전 제거 */
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.avatarImage {
+    width: 100%;
+    /* 공백 없이 꽉 차도록 수정 */
+    height: 100%;
+    object-fit: contain;
+    /* 비율 유지하며 최대 크기로 */
+}
+
+.inlineLogo {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    height: 1.5rem;
+    /* 살짝 크기 조절하여 자연스럽게 함 */
+    margin: 0 0.3rem;
+    transform: translateY(-2px);
+}
+
+.profile strong {
+    color: var(--secondary);
+    font-weight: 800;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activeIndicator {
+    background: var(--accent);
+    width: 30px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .mainTitle {
+        font-size: 2.5rem;
+    }
+}
