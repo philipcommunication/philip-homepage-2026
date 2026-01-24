@@ -14,8 +14,34 @@ const notoNS = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.philip.kr"), // 도메인에 맞게 수정
   title: "필립(必立) | 데이터 기반 마케팅 에이전시",
   description: "감이 아니라 데이터로 마케팅을 세웁니다. 브랜드를 반드시(必) 일으켜 세우는(立) 필립(Philip).",
+  keywords: ["마케팅 에이전시", "데이터 분석", "퍼포먼스 마케팅", "브랜드 마케팅", "필립", "Philip"],
+  openGraph: {
+    title: "필립(必立) | 데이터 기반 마케팅 에이전시",
+    description: "브랜드를 반드시(必) 일으켜 세우는(立) 파트너, 필립입니다.",
+    url: "https://www.philip.kr",
+    siteName: "필립(Philip)",
+    locale: "ko_KR",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.png", // public 폴더에 해당 이미지가 있으면 좋습니다
+        width: 1200,
+        height: 630,
+        alt: "Philip Marketing Agency",
+      },
+    ],
+  },
+  verification: {
+    other: {
+      "naver-site-verification": "272ea4f8a865ea27b492ea1794c6423875e7552d",
+    },
+  },
+  alternates: {
+    canonical: "https://www.philip.kr",
+  },
 };
 
 import FloatingCall from "@/components/FloatingCall";

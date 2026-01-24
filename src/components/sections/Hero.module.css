@@ -88,7 +88,7 @@
 }
 
 .profile {
-    padding: 1.2rem 2rem;
+    padding: 1.2rem 2.5rem;
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -101,9 +101,20 @@
     width: fit-content;
 }
 
+.profile p {
+    font-size: 1.4rem;
+    /* description 폰트 사이즈와 동일하게 맞춤 */
+    color: var(--foreground);
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+}
+
 .avatar {
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    /* 아이콘 사이즈도 살짝 키움 */
+    height: 50px;
     background: transparent;
     /* 흰 공백 제거를 위해 배경 투명화 */
     border-radius: 8px;
@@ -129,9 +140,10 @@
     display: inline-block;
     vertical-align: middle;
     width: auto;
-    height: 1.5rem;
+    height: 1.8rem;
+    /* 텍스트 크기에 맞춰 로고 키움 */
     /* 살짝 크기 조절하여 자연스럽게 함 */
-    margin: 0 0.3rem;
+    margin: 0 0.4rem;
     transform: translateY(-2px);
 }
 
