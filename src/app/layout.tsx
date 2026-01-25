@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png", // public 폴더에 해당 이미지가 있으면 좋습니다
+        url: "/philip-ci.png", // public 폴더의 philip-ci.png 사용
         width: 1200,
         height: 630,
         alt: "Philip Marketing Agency",
