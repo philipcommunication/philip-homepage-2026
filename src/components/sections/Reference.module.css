@@ -158,7 +158,23 @@
 }
 
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
+    .portfolioContainer {
+        padding: 1rem 0;
+    }
+
+    .rollingRow {
+        gap: 0.5rem;
+        /* 좌우 이미지 간격 좁힘 */
+        margin-bottom: 0.5rem;
+        /* 두 줄 간격 좁힘 */
+    }
+
+    .card {
+        width: 180px;
+        /* 모바일에서 카드 크기 축소 */
+    }
+
+    .sectionTitle {
+        font-size: 2.2rem;
     }
 }
