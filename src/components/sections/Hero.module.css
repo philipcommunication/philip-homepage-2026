@@ -70,8 +70,9 @@
     letter-spacing: -0.03em;
     color: #111;
     /* 기존 대비 명도를 낮추어 훨씬 짙게 변경 */
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    /* 미묘한 그림자로 가독성 향상 */
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8), 0 0 1px rgba(0, 0, 0, 0.1);
+    /* 가벼운 흰색 외곽선 효과와 미묘한 그림자로 가독성 극대화 */
+    word-break: keep-all;
 }
 
 .mainTitle span {
@@ -85,6 +86,7 @@
     margin-bottom: 3.5rem;
     max-width: 600px;
     opacity: 0.8;
+    word-break: keep-all;
 }
 
 .profile {
@@ -181,6 +183,18 @@
 @media (max-width: 768px) {
     .mainTitle {
         font-size: 2.5rem;
+    }
+
+    .subTitle {
+        font-size: 0.9rem;
+        letter-spacing: 0.15em;
+        margin-bottom: 0.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
     }
 
     .profile {

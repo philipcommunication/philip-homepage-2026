@@ -17,8 +17,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
     flex-wrap: wrap;
+    word-break: keep-all;
 }
 
 .titleLogo {
@@ -31,6 +32,8 @@
 .sectionDesc {
     font-size: 1.1rem;
     color: var(--text-muted);
+    line-height: 1.6;
+    word-break: keep-all;
 }
 
 .grid {
@@ -76,11 +79,17 @@
     color: var(--text-muted);
     line-height: 1.7;
     font-size: 0.95rem;
+    word-break: keep-all;
 }
 
 @media (max-width: 768px) {
     .sectionTitle {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        gap: 0.4rem;
+    }
+
+    .titleLogo {
+        height: 1.8rem;
     }
 
     .cardHeader {

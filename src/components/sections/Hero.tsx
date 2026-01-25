@@ -17,14 +17,14 @@ const slides = [
         image: "/hero-2.png",
         subTitle: "브랜드와 고객 그 이상의 연결",
         mainTitle: "성장을 위한\n네트워킹 파트너",
-        description: "필립은 단순한 광고를 넘어 타겟과 브랜드를 잇는\n가장 견고한 연결 고리를 만듭니다."
+        description: "필립은\n단순한 광고를 넘어 고객과 브랜드를 잇는\n가장 견고한 연결고리를 만들어 갑니다."
     },
     {
         id: 3,
         image: "/hero-3.png",
         subTitle: "성공을 위한 가장 확실한 선택",
         mainTitle: "브랜드를\n바로세우는 마케팅 에이전시",
-        description: "전략적인 분석과 창의적인 솔루션으로\n비즈니스의 지속 가능한 성장을 약속합니다."
+        description: "전략적인 분석과 창의적인 솔루션으로\n비즈니스의 지속가능한 성장을 제안합니다."
     }
 ];
 

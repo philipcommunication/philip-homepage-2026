@@ -12,7 +12,7 @@
   --glass-bg: rgba(29, 53, 87, 0.05);
   --glass-border: rgba(29, 53, 87, 0.1);
   --header-bg: rgba(255, 255, 255, 0.8);
-  --hero-overlay: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.2) 100%);
+  --hero-overlay: linear-gradient(to right, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.6) 100%);
   --card-bg: #FFFFFF;
 }
 
@@ -143,7 +143,7 @@
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.1);
   --header-bg: rgba(15, 28, 46, 0.8);
-  --hero-overlay: linear-gradient(to right, rgba(15, 28, 46, 0.95) 0%, rgba(15, 28, 46, 0.5) 50%, rgba(15, 28, 46, 0.2) 100%);
+  --hero-overlay: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.6) 100%);
   --card-bg: rgb(28, 43, 58);
 }
 

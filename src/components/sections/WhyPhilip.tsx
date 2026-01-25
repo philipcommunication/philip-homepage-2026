@@ -19,7 +19,10 @@ export default function WhyPhilip() {
                         />
                         이어야 할까요?
                     </h2>
-                    <p className={styles.sectionDesc}>필립이 마케팅 시장에서 압도적인 성과를 내는 이유입니다.</p>
+                    <p className={styles.sectionDesc}>
+                        필립이 마케팅 시장에서<br />
+                        성과를 내는 이유입니다.
+                    </p>
                 </div>
 
                 <div className={styles.grid}>

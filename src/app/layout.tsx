@@ -43,9 +43,8 @@ export const metadata: Metadata = {
     canonical: "https://www.philip.kr",
   },
   icons: {
-    icon: "/logo-black.png",
-    shortcut: "/logo-black.png",
-    apple: "/logo-black.png",
+    icon: "/logo-black.png?v=1",
+    apple: "/logo-black.png?v=1",
   },
 };
 
