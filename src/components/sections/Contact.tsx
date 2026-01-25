@@ -28,17 +28,6 @@ export default function Contact() {
                 </div>
             </div>
 
-            <footer className={styles.footer}>
-                <div className="container">
-                    <div className={styles.footerInner}>
-                        <div className={styles.footerInfo}>
-                            <p>대표자 : {siteConfig.representative} | 사업자 등록번호 : {siteConfig.businessNumber}</p>
-                            <p>대표 번호 : {siteConfig.phone}</p>
-                        </div>
-                        <p className={styles.copyright}>{siteConfig.copyright}</p>
-                    </div>
-                </div>
-            </footer>
         </section>
     );
 }

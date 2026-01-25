@@ -49,6 +49,7 @@ export const metadata: Metadata = {
 };
 
 import FloatingCall from "@/components/FloatingCall";
+import BackToTop from "@/components/BackToTop";
 
 export default function RootLayout({
   children,
@@ -87,6 +88,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         {children}
         <FloatingCall />
+        <BackToTop />
       </body>
     </html>
   );
