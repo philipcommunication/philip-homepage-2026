@@ -1,0 +1,129 @@
+.footer {
+    padding: 5rem 0 3rem;
+    background: #111;
+    color: #eee;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.brandSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.philip {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    color: #fff;
+}
+
+.slogan {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+}
+
+.companyDesc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #aaa;
+    word-break: keep-all;
+}
+
+.infoSide {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.infoGroup h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem 2rem;
+}
+
+.infoGrid span {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.infoGrid a {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.infoGrid a:hover {
+    color: var(--accent);
+}
+
+.linksGroup {
+    display: flex;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+}
+
+.privacyLink {
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.privacyLink:hover {
+    opacity: 0.8;
+}
+
+.bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .infoGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 4rem 0 2rem;
+    }
+}

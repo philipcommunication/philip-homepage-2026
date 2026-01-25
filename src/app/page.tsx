@@ -5,6 +5,8 @@ import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
 import Reference from "@/components/sections/Reference";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
     <main>
@@ -15,6 +17,7 @@ export default function Home() {
       <Process />
       <Reference />
       <Contact />
+      <Footer />
     </main>
   );
 }

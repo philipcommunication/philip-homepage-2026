@@ -11,6 +11,8 @@ export const siteConfig = {
     phone: "0507-1383-2365",
     representative: "노동규",
     businessNumber: "839-07-01288",
+    email: "ndk@philip.kr",
+    privacyManager: "노동규",
     copyright: "2026© 필립(必立) All rights reserved",
 
     // SNS 및 외부 링크
