@@ -8,7 +8,7 @@ export default function Footer() {
                 <div className={styles.content}>
                     <div className={styles.brandSide}>
                         <div className={styles.logo}>
-                            <span className={styles.philip}>PHILIP</span>
+                            <span className={styles.philip}>필립</span>
                             <span className={styles.slogan}>데이터 기반 마케팅 에이전시</span>
                         </div>
                         <p className={styles.companyDesc}>

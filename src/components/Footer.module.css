@@ -25,10 +25,9 @@
 }
 
 .philip {
-    font-family: var(--font-outfit), sans-serif;
+    font-family: var(--font-noto-sans), sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
-    letter-spacing: 0.1rem;
     color: #fff;
 }
 

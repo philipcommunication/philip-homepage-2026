@@ -6,7 +6,7 @@
 export const siteConfig = {
     companyName: "필립(必立)",
     englishName: "PHILIP",
-    fullCompanyName: "필립(必立)커뮤니케이션",
+    fullCompanyName: "필립(必立)",
     address: "경기도 의정부시 평화로 673-5 (가능동)",
     phone: "0507-1383-2365",
     representative: "노동규",
