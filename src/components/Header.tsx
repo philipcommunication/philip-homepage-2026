@@ -52,8 +52,8 @@ export default function Header() {
                 {/* 데스크탑 내비게이션 */}
                 <nav className={styles.nav}>
                     <Link href="/about" className={styles.navLink}>회사소개</Link>
-                    <Link href="/#services" className={styles.navLink}>업무영역</Link>
-                    <Link href="/#reference" className={styles.navLink}>레퍼런스</Link>
+                    <Link href="/services" className={styles.navLink}>업무영역</Link>
+                    <Link href="/reference" className={styles.navLink}>레퍼런스</Link>
                     <div className={styles.dropdown}>
                         <Link href="/collaboration" className={styles.navLink}>협업신청</Link>
                         <div className={styles.dropdownMenu}>
@@ -61,7 +61,7 @@ export default function Header() {
                             <Link href="/collaboration/agency" className={styles.dropdownItem}>대행사/실행사 협업</Link>
                         </div>
                     </div>
-                    <a href="/#contact" className={styles.contactBtn}>문의하기</a>
+                    <Link href="/contact" className={styles.contactBtn}>문의하기</Link>
                 </nav>
 
                 {/* 모바일 메뉴 버튼 */}
@@ -78,8 +78,8 @@ export default function Header() {
                 {/* 모바일 내비게이션 오버레이 */}
                 <nav className={`${styles.mobileNav} ${isMobileMenuOpen ? styles.active : ""}`}>
                     <Link href="/about" className={styles.mobileNavLink} onClick={toggleMobileMenu}>회사소개</Link>
-                    <Link href="/#services" className={styles.mobileNavLink} onClick={toggleMobileMenu}>업무영역</Link>
-                    <Link href="/#reference" className={styles.mobileNavLink} onClick={toggleMobileMenu}>레퍼런스</Link>
+                    <Link href="/services" className={styles.mobileNavLink} onClick={toggleMobileMenu}>업무영역</Link>
+                    <Link href="/reference" className={styles.mobileNavLink} onClick={toggleMobileMenu}>레퍼런스</Link>
 
                     <div className={styles.mobileMenuWrapper}>
                         <div className={styles.mobileNavLink} onClick={toggleCollab}>
@@ -91,7 +91,7 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <a href="/#contact" className={styles.contactBtn} onClick={toggleMobileMenu}>문의하기</a>
+                    <Link href="/contact" className={styles.contactBtn} onClick={toggleMobileMenu}>문의하기</Link>
                 </nav>
             </div>
         </header>

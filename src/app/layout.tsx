@@ -42,6 +42,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.philip.kr",
   },
+  icons: {
+    icon: "/logo-black.png",
+  },
 };
 
 import FloatingCall from "@/components/FloatingCall";
@@ -53,7 +56,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5MQWCZKW');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+      </head>
       <body className={`${outfit.variable} ${notoNS.variable}`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5MQWCZKW"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <div className="glow-bg">
           <div className="glow-circle glow-1"></div>
           <div className="glow-circle glow-2"></div>
