@@ -68,6 +68,7 @@ export default function Reference() {
                 <div className={styles.ctaWrapper}>
                     <a
                         href="https://drive.google.com/file/d/13I8UIbtWz-9Qkq_0kf-W_A6paPa0lOHB/view?usp=sharing"
+                        id="btn-proposal-download"
                         className={styles.downloadBtn}
                         target="_blank"
                         rel="noopener noreferrer"

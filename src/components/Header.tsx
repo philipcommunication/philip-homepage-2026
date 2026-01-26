@@ -61,7 +61,7 @@ export default function Header() {
                             <Link href="/collaboration/agency" className={styles.dropdownItem}>대행사/실행사 협업</Link>
                         </div>
                     </div>
-                    <Link href="/#contact" className={styles.contactBtn}>문의하기</Link>
+                    <Link href="/#contact" id="btn-contact-header" className={styles.contactBtn}>문의하기</Link>
                 </nav>
 
                 {/* 모바일 메뉴 버튼 */}
@@ -91,7 +91,7 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <Link href="/#contact" className={styles.contactBtn} onClick={toggleMobileMenu}>문의하기</Link>
+                    <Link href="/#contact" id="btn-contact-header-mobile" className={styles.contactBtn} onClick={toggleMobileMenu}>문의하기</Link>
                 </nav>
             </div>
         </header>
