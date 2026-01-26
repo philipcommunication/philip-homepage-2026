@@ -40,6 +40,11 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
+.img.disabledImage {
+    filter: brightness(0.6) grayscale(0.5);
+    opacity: 0.8;
+}
+
 .textBox {
     flex: 1;
 }

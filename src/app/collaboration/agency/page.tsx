@@ -20,7 +20,14 @@ export default function AgencyPage() {
                     {agencyCollabs.map((collab, index) => (
                         <div key={collab.id} className={`${styles.collabItem} ${index % 2 === 1 ? styles.reverse : ""}`}>
                             <div className={styles.imageBox}>
-                                <Image src={collab.image} alt={collab.title} fill style={{ objectFit: "cover" }} className={styles.img} unoptimized />
+                                <Image
+                                    src={collab.image}
+                                    alt={collab.title}
+                                    fill
+                                    style={{ objectFit: "cover" }}
+                                    className={`${styles.img} ${!collab.isActive ? styles.disabledImage : ""}`}
+                                    unoptimized
+                                />
                             </div>
                             <div className={styles.textBox}>
                                 <h2 className={styles.itemTitle}>{collab.title}</h2>

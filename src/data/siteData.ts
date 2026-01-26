@@ -141,7 +141,7 @@ export const influencerCollabs = [
         id: 2,
         title: "오쎄 인플루언서 협업",
         description: "네이버/인스타그램 협업 인플루언서 모집",
-        image: "/portfolio/17.png",
+        image: "/portfolio/15.png",
         isActive: false,
         link: "#",
         buttonText: "신청하기"
