@@ -30,7 +30,9 @@ export default function AgencyPage() {
                                         {collab.buttonText || "신청하기"}
                                     </a>
                                 ) : (
-                                    <button className={`${styles.applyBtn} ${styles.disabled}`} disabled>모집 완료</button>
+                                    <button className={`${styles.applyBtn} ${styles.disabled}`} disabled>
+                                        {collab.buttonText || "신청하기"}
+                                    </button>
                                 )}
                             </div>
                         </div>

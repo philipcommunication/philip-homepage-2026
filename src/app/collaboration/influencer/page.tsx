@@ -26,9 +26,13 @@ export default function InfluencerPage() {
                                 <h2 className={styles.itemTitle}>{collab.title}</h2>
                                 <p className={styles.itemDesc}>{collab.description}</p>
                                 {collab.isActive ? (
-                                    <a href={collab.link} target="_blank" rel="noopener noreferrer" className={styles.applyBtn}>신청하기</a>
+                                    <a href={collab.link} target="_blank" rel="noopener noreferrer" className={styles.applyBtn}>
+                                        {collab.buttonText || "신청하기"}
+                                    </a>
                                 ) : (
-                                    <button className={`${styles.applyBtn} ${styles.disabled}`} disabled>모집 완료</button>
+                                    <button className={`${styles.applyBtn} ${styles.disabled}`} disabled>
+                                        {collab.buttonText || "신청하기"}
+                                    </button>
                                 )}
                             </div>
                         </div>

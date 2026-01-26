@@ -133,8 +133,18 @@ export const influencerCollabs = [
         title: "두나무 인플루언서 협업",
         description: "네이버/인스타그램 협업 인플루언서 모집",
         image: "/portfolio/16.png",
-        isActive: true,
-        link: "https://docs.google.com/forms/your-influencer-form-url"
+        isActive: false,
+        link: "https://docs.google.com/forms/your-influencer-form-url",
+        buttonText: "신청하기"
+    },
+    {
+        id: 2,
+        title: "오쎄 인플루언서 협업",
+        description: "네이버/인스타그램 협업 인플루언서 모집",
+        image: "/portfolio/17.png",
+        isActive: false,
+        link: "#",
+        buttonText: "신청하기"
     }
 ];
 
@@ -146,7 +156,7 @@ export const agencyCollabs = [
         description: "귀사의 귀한 제안을 기다립니다. 언제든지 좋은제안 감사합니다.",
         image: "/handshake.png",
         isActive: true,
-        link: "https://docs.google.com/forms/your-agency-form-url",
+        link: "https://forms.gle/XJLjMwUvwWKn31vW8",
         buttonText: "협업제안"
     }
 ];
