@@ -72,7 +72,7 @@ export default function Hero() {
                         <div className={styles.profile}>
                             <div className={styles.avatar}>
                                 <Image
-                                    src="/logo-black.png"
+                                    src="/images/logo-black.png"
                                     alt="Philip Black Logo"
                                     width={30}
                                     height={30}
@@ -83,7 +83,7 @@ export default function Hero() {
                             <p>
                                 안녕하세요. 브랜드를 바로 세우는
                                 <Image
-                                    src="/logo-orange.png"
+                                    src="/images/logo-orange.png"
                                     alt="필립"
                                     width={60}
                                     height={24}

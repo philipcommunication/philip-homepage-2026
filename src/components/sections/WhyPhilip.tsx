@@ -10,7 +10,7 @@ export default function WhyPhilip() {
                     <h2 className={styles.sectionTitle}>
                         왜
                         <Image
-                            src="/logo-orange.png"
+                            src="/images/logo-orange.png"
                             alt="필립"
                             width={100}
                             height={40}
