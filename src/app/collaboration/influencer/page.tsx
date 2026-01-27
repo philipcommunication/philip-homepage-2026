@@ -19,7 +19,7 @@ export default function InfluencerPage() {
                 <div className="container">
                     {influencerCollabs.map((collab, index) => (
                         <div key={collab.id} className={`${styles.collabItem} ${index % 2 === 1 ? styles.reverse : ""}`}>
-                            <div className={styles.imageBox}>
+                            <div className={`${styles.imageBox} ${!collab.isActive ? styles.disabledImageBox : ""}`}>
                                 <Image
                                     src={collab.image}
                                     alt={collab.title}
