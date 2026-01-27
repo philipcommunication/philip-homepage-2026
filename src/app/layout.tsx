@@ -42,11 +42,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.philip.kr",
   },
-  icons: {
-    icon: "/images/logo-black.png?v=3",
-    shortcut: "/images/logo-black.png?v=3",
-    apple: "/images/logo-black.png?v=3",
-  },
+
 };
 
 import FloatingCall from "@/components/FloatingCall";
