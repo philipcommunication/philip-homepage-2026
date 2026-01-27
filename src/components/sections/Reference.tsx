@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./Reference.module.css";
 import { portfolioItems } from "@/data/portfolio";
+import { siteConfig } from "@/data/siteData";
 
 export default function Reference() {
     // 무한 롤링을 위해 아이템 복제
@@ -67,7 +68,7 @@ export default function Reference() {
             <div className="container">
                 <div className={styles.ctaWrapper}>
                     <a
-                        href="https://drive.google.com/file/d/13I8UIbtWz-9Qkq_0kf-W_A6paPa0lOHB/view?usp=sharing"
+                        href={siteConfig.links.proposal}
                         id="btn-proposal-download"
                         className={styles.downloadBtn}
                         target="_blank"
