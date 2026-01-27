@@ -25,14 +25,6 @@ export const metadata: Metadata = {
     siteName: "필립(Philip)",
     locale: "ko_KR",
     type: "website",
-    images: [
-      {
-        url: "/philip-ci.png", // public 폴더의 philip-ci.png 사용
-        width: 1200,
-        height: 630,
-        alt: "Philip Marketing Agency",
-      },
-    ],
   },
   verification: {
     other: {
