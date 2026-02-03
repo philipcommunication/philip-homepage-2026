@@ -1,5 +1,5 @@
 .contact {
-    padding-top: 10rem;
+    padding-top: 5rem;
     background: rgb(250, 248, 245);
     /* 섹션 구분을 위한 연한 아이보리 배경 */
 }
@@ -7,7 +7,7 @@
 .content {
     /* ... existing styles ... */
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
 }
 
 /* ... other styles remain same ... */
