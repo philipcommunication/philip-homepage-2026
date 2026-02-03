@@ -56,7 +56,7 @@ export const strengths = [
 export const services = [
     {
         title: "공식광고 대행",
-        description: "네이버, 구글, 메타 등 주요 매체의 파트너로서 최적화된 광고 운영을 지원합니다.",
+        description: "네이버, 구글, 메타 등 주요 매체의 최적화된 광고 운영을 지원합니다.",
         icon: "🚀"
     },
     {
@@ -78,6 +78,29 @@ export const services = [
         title: "마케팅 교육",
         description: "실무에 바로 활용 가능한 최신 마케팅 트렌드와 데이터 활용 능력을 교육합니다.",
         icon: "🎓"
+    }
+];
+
+// 2.5 업무 형태 (Service Types) 섹션 데이터
+export const serviceTypes = [
+    {
+        title: "광고대행",
+        items: [
+            "공식/바이럴 광고 운영 대행을 맡기고 싶을 때"
+        ]
+    },
+    {
+        title: "데이터분석",
+        items: [
+            "마케팅이 잘 운영되고있는지 진단이 필요할 때"
+        ]
+    },
+    {
+        title: "마케팅 컨설팅/교육",
+        items: [
+            "마케팅 운영 전반적으로 도움이 필요할 때",
+            "마케팅에 바로 투입 될 수 있도록 실무교육이 필요할 때"
+        ]
     }
 ];
 
