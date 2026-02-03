@@ -1,61 +1,65 @@
 .serviceTypes {
-    padding: 6rem 0;
+    padding: 10rem 0;
     position: relative;
-    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .sectionTitle {
-    font-size: 2.5rem;
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    background: var(--logo-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    color: var(--foreground);
+}
+
+.sectionDesc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .card {
-    padding: 2.5rem;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    padding: 2.5rem 1.5rem;
+    border-radius: 24px;
+    text-align: center;
+    transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .card:hover {
     transform: translateY(-10px);
+    border-color: var(--accent);
+    /* This assumes the global .glass class has a border that we are overriding color-wise, or adding one */
+    /* To be safe and mimic the request "outline effect", let's be explicit if .glass doesn't handle it perfectly on hover alone */
+    box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.1);
+}
+
+/* Ensure the border color change is visible if .glass sets a border */
+/* If .glass sets border: 1px solid ...; this will work. */
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .cardTitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--foreground);
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.cardTitle::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 40px;
-    height: 3px;
-    background: var(--accent);
-    border-radius: 2px;
+    line-height: 1.2;
 }
 
 .cardList {
@@ -69,17 +73,9 @@
     font-size: 1.05rem;
     line-height: 1.6;
     color: var(--text-muted);
-    margin-bottom: 0.8rem;
-    padding-left: 1.2rem;
-    position: relative;
-}
-
-.cardItem::before {
-    content: '•';
-    color: var(--accent);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+    /* Centered */
 }
 
 .cardItem:last-child {
@@ -94,12 +90,12 @@
 }
 
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
+    .sectionTitle {
+        font-size: 2.2rem;
     }
 
-    .sectionTitle {
-        font-size: 2rem;
+    .grid {
+        grid-template-columns: 1fr;
     }
 
     .card {
