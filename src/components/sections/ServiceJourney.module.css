@@ -1,0 +1,125 @@
+.serviceJourney {
+    padding: 8rem 0;
+    background: #F8F7F2;
+    /* Ivory Background */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0D1B2A;
+    margin-bottom: 1rem;
+}
+
+.desc {
+    color: #64748B;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.timelineContainer {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.line {
+    display: none;
+}
+
+.stepsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.stepItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.iconCircle {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 2px solid #C5A059;
+    /* Gold border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C5A059;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.stepItem:hover .iconCircle {
+    background-color: #C5A059;
+    color: #FFFFFF;
+    transform: scale(1.1);
+    box-shadow: 0 20px 25px -5px rgba(197, 160, 89, 0.3);
+}
+
+.stepNumber {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #EF4444;
+    /* Red for high visibility */
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.stepTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0D1B2A;
+    margin-bottom: 0.75rem;
+}
+
+.stepDesc {
+    font-size: 0.9rem;
+    color: #64748B;
+    max-width: 220px;
+    margin: 0 auto;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .line {
+        display: block;
+        position: absolute;
+        top: 2.75rem;
+        /* Center of the 5.5rem circle */
+        left: 5%;
+        width: 90%;
+        height: 1px;
+        background-color: rgba(197, 160, 89, 0.3);
+        /* Dotted or solid gold line */
+        z-index: 0;
+    }
+
+    .stepsWrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0;
+    }
+}

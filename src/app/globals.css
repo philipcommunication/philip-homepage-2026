@@ -128,47 +128,42 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Version 7: Mirra Theme (White/Purple Modern SaaS) */
+/* Version 7: Philip Premium (Dark Navy & Orange/Gold) */
 [data-theme='theme7'] {
   --background: #FFFFFF;
-  --background-alt: #FAFAFA;
-  /* Very light gray for alternate sections */
-  --foreground: #111827;
-  /* Dark charcoal text */
-  --text-muted: #6B7280;
-  /* Cool gray text */
-  --accent: #5D5CDE;
-  /* Mirra Purple */
-  --accent-hover: #4B4AC0;
-  --accent-rgb: 93, 92, 222;
-  --secondary: #A78BFA;
-  /* Soft Lavender */
-  --nav-link: rgba(17, 24, 39, 0.7);
-  --logo-gradient: linear-gradient(90deg, #111827, #5D5CDE);
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  /* Lighter glass for white bg */
-  --glass-border: rgba(93, 92, 222, 0.1);
-  /* Subtle purple border */
-  --header-bg: rgba(255, 255, 255, 0.9);
-  --hero-overlay: transparent;
-  /* Clean look */
+  --background-alt: #F8F7F2;
+  /* Warm Ivory */
+  --foreground: #0D1B2A;
+  /* Premium Dark Navy */
+  --text-muted: #64748B;
+  /* Slate-500 */
+  --accent: #F97316;
+  /* Action Orange */
+  --accent-hover: #EA580C;
+  --accent-rgb: 249, 115, 22;
+  --secondary: #C5A059;
+  /* Brand Gold */
+  --nav-link: rgba(13, 27, 42, 0.7);
+  --logo-gradient: linear-gradient(90deg, #0D1B2A, #F97316);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(13, 27, 42, 0.1);
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --hero-overlay: linear-gradient(135deg, rgba(13, 27, 42, 0.95) 0%, rgba(13, 27, 42, 0.7) 100%);
   --card-bg: #FFFFFF;
+  --text-on-ivory: #0D1B2A;
 }
 
 /* V7 Reliable Theme Overrides */
 [data-theme='theme7'] .v7-ivory-section {
-  background-color: var(--background) !important;
-  /* Use main background */
+  background-color: var(--background-alt) !important;
+  /* Ivory */
+  color: var(--text-on-ivory) !important;
 }
 
 [data-theme='theme7'] .v7-white-section {
   background-color: var(--background-alt) !important;
-  /* Use alt background */
-}
-
-[data-theme='theme7'] .v7-ivory-section,
-[data-theme='theme7'] .v7-white-section {
-  color: var(--foreground) !important;
+  /* Also Ivory for consistency in "light" sections, or #FFFFFF */
+  color: var(--text-on-ivory) !important;
 }
 
 [data-theme='theme7'] .v7-ivory-section h1,
@@ -184,25 +179,31 @@
   color: inherit !important;
 }
 
-/* V7 Card Styles - Refined for Mirra Style */
+/* Glass Cards on Navy Background */
+[data-theme='theme7'] .glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Cards on Ivory Background - White with Shadow */
 [data-theme='theme7'] .v7-ivory-section [class*="_card"],
 [data-theme='theme7'] .v7-white-section [class*="_card"] {
   background-color: #FFFFFF !important;
-  border: 1px solid #E5E7EB !important;
-  /* Light gray border */
-  border-radius: 24px;
-  /* More rounded */
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  color: var(--text-on-ivory);
 }
 
 [data-theme='theme7'] .v7-ivory-section [class*="_card"]:hover,
 [data-theme='theme7'] .v7-white-section [class*="_card"]:hover {
   border-color: var(--accent) !important;
   transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Specific fix for elements that were accidentally getting card borders */
+/* Specific fix for transparency */
 [data-theme='theme7'] [class*="cardHeader"],
 [data-theme='theme7'] [class*="cardTitle"],
 [data-theme='theme7'] [class*="cardDesc"],

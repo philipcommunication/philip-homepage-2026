@@ -1,76 +1,236 @@
 .services {
     padding: 10rem 0;
+    background: #0D1B2A;
+    /* Dark Navy to match MarketingBudget */
     position: relative;
-    border-top: 1px solid rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
+/* Background Glows */
+.services::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
+    position: relative;
+    z-index: 10;
 }
 
 .sectionTitle {
     font-family: var(--font-outfit), sans-serif;
     font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-}
-
-.sectionDesc {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem;
-}
-
-.card {
-    padding: 2.5rem 1.5rem;
-    border-radius: 24px;
-    text-align: center;
-    transition: all 0.4s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.1);
-}
-
-.cardHeader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.icon {
-    font-size: 2.2rem;
-    flex-shrink: 0;
-}
-
-.cardTitle {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 0;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
     line-height: 1.2;
 }
 
-.cardDesc {
-    color: var(--text-muted);
-    line-height: 1.7;
+.highlight {
+    color: #FDBA74;
+    /* Gold Text */
+}
+
+.keywordGrid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.keywordItem {
+    padding: 0.6rem 1.8rem;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 160px;
+    backdrop-filter: blur(10px);
+}
+
+.ko {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.en {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #F97316;
+    /* Orange English label */
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 4px;
+}
+
+/* Dashboard Style Visualization */
+.visualizationWrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2.5rem;
+    padding: 5rem;
+    position: relative;
+    z-index: 10;
+    backdrop-filter: blur(20px);
+}
+
+.comparisonGrid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.compCol {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.colLabel {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.colLabel.active {
+    color: #FFFFFF;
+}
+
+.activeDot {
+    width: 8px;
+    height: 8px;
+    background: #F97316;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #F97316;
+}
+
+/* Arrow Connector */
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+/* Bar styles */
+.barGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.barLabel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.value {
+    color: #FFFFFF;
+    font-weight: 800;
+}
+
+.barTrack {
+    height: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 99px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 99px;
+    transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bgGrey {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bgOrange {
+    background: linear-gradient(90deg, #F97316, #FB923C);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+}
+
+.bgGold {
+    background: linear-gradient(90deg, #FDBA74, #FED7AA);
+    box-shadow: 0 0 20px rgba(253, 186, 116, 0.4);
+}
+
+.statusCard {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.statusInner {
+    background: rgba(249, 115, 22, 0.1);
+    border: 1.5px solid rgba(249, 115, 22, 0.2);
+    padding: 1.5rem 3rem;
+    border-radius: 99px;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.impact {
+    color: #F97316;
+    font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+    .visualizationWrapper {
+        padding: 3rem;
+    }
+
+    .comparisonGrid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
 }
 
 @media (max-width: 768px) {
     .sectionTitle {
-        font-size: 2.2rem;
+        font-size: 2.25rem;
     }
 
-    .grid {
-        grid-template-columns: 1fr;
+    .visualizationWrapper {
+        border-radius: 1.5rem;
+    }
+
+    .statusInner {
+        font-size: 1.1rem;
+        padding: 1.25rem 2rem;
+        border-radius: 2rem;
+        width: 100%;
+        text-align: center;
     }
 }

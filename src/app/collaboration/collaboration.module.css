@@ -69,7 +69,7 @@
 }
 
 .applyBtn {
-    background: var(--accent);
+    background: #f97316;
     color: #fff;
     padding: 1rem 2.5rem;
     border-radius: 50px;
@@ -79,9 +79,9 @@
 }
 
 .applyBtn:hover {
-    background: var(--accent-hover, var(--accent));
+    background: #ea580c;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(var(--accent-rgb), 0.3);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
 }
 
 .applyBtn.disabled {

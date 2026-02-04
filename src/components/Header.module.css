@@ -115,7 +115,7 @@
 }
 
 .contactBtn {
-    background: var(--accent);
+    background: #f97316;
     color: #fff;
     padding: 0.6rem 1.5rem;
     border-radius: 50px;
@@ -126,7 +126,7 @@
 
 .contactBtn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(var(--accent-rgb), 0.4);
+    box-shadow: 0 5px 15px rgba(249, 115, 22, 0.4);
 }
 
 /* 기본적으로 모바일 요소 숨김 */

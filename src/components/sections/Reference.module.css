@@ -3,7 +3,8 @@
     border-top: 1px solid rgba(0, 0, 0, 0.02);
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     /* 하단 경계선 추가 */
-    background: #fff;
+    background: #F8F7F2;
+    /* Change to Ivory to differentiate from Education */
 }
 
 .header {
@@ -140,7 +141,7 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    background: var(--accent);
+    background: #f97316;
     color: #fff;
     border: none;
     padding: 1.2rem 2.5rem;
@@ -148,12 +149,12 @@
     font-weight: 700;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(var(--accent-rgb), 0.3);
+    box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
 }
 
 .downloadBtn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(var(--accent-rgb), 0.4);
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.4);
     opacity: 0.9;
 }
 

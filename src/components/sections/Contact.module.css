@@ -70,9 +70,10 @@
 }
 
 .linkItem:hover .icon {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #000;
+    background: var(--cta);
+    /* was accent, now Orange */
+    border-color: var(--cta);
+    color: #FFFFFF;
 }
 
 .label {
