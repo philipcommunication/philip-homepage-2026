@@ -128,37 +128,47 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Version 7: Hybrid (V4 Base + V5 Accents for Why & Services) */
+/* Version 7: Mirra Theme (White/Purple Modern SaaS) */
 [data-theme='theme7'] {
-  --background: rgb(15, 28, 46);
-  --background-alt: rgb(28, 43, 58);
-  --foreground: rgb(245, 241, 232);
-  --text-muted: rgb(176, 176, 176);
-  --accent: rgb(47, 107, 79);
-  --accent-hover: rgb(46, 111, 126);
-  --accent-rgb: 47, 107, 79;
-  --secondary: rgb(184, 115, 51);
-  --nav-link: rgba(245, 241, 232, 0.7);
-  --logo-gradient: linear-gradient(90deg, rgb(245, 241, 232), rgb(47, 107, 79));
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --header-bg: rgba(15, 28, 46, 0.8);
-  --hero-overlay: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.6) 100%);
-  --card-bg: rgb(28, 43, 58);
+  --background: #FFFFFF;
+  --background-alt: #FAFAFA;
+  /* Very light gray for alternate sections */
+  --foreground: #111827;
+  /* Dark charcoal text */
+  --text-muted: #6B7280;
+  /* Cool gray text */
+  --accent: #5D5CDE;
+  /* Mirra Purple */
+  --accent-hover: #4B4AC0;
+  --accent-rgb: 93, 92, 222;
+  --secondary: #A78BFA;
+  /* Soft Lavender */
+  --nav-link: rgba(17, 24, 39, 0.7);
+  --logo-gradient: linear-gradient(90deg, #111827, #5D5CDE);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  /* Lighter glass for white bg */
+  --glass-border: rgba(93, 92, 222, 0.1);
+  /* Subtle purple border */
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --hero-overlay: transparent;
+  /* Clean look */
+  --card-bg: #FFFFFF;
 }
 
 /* V7 Reliable Theme Overrides */
 [data-theme='theme7'] .v7-ivory-section {
-  background-color: rgb(245, 241, 232) !important;
+  background-color: var(--background) !important;
+  /* Use main background */
 }
 
 [data-theme='theme7'] .v7-white-section {
-  background-color: #FFFFFF !important;
+  background-color: var(--background-alt) !important;
+  /* Use alt background */
 }
 
 [data-theme='theme7'] .v7-ivory-section,
 [data-theme='theme7'] .v7-white-section {
-  color: rgb(15, 28, 46) !important;
+  color: var(--foreground) !important;
 }
 
 [data-theme='theme7'] .v7-ivory-section h1,
@@ -171,24 +181,25 @@
 [data-theme='theme7'] .v7-white-section h3,
 [data-theme='theme7'] .v7-white-section p,
 [data-theme='theme7'] .v7-white-section span {
-  color: rgb(15, 28, 46) !important;
+  color: inherit !important;
 }
 
-/* V7 Card Styles - Refined to target only container cards */
+/* V7 Card Styles - Refined for Mirra Style */
 [data-theme='theme7'] .v7-ivory-section [class*="_card"],
 [data-theme='theme7'] .v7-white-section [class*="_card"] {
-  background-color: var(--glass-bg) !important;
-  border: 1px solid var(--glass-border) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  /* Light gray border */
+  border-radius: 24px;
+  /* More rounded */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme='theme7'] .v7-ivory-section [class*="_card"]:hover,
 [data-theme='theme7'] .v7-white-section [class*="_card"]:hover {
   border-color: var(--accent) !important;
-  background-color: rgba(var(--accent-rgb), 0.05) !important;
-  transform: translateY(-10px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
 }
 
 /* Specific fix for elements that were accidentally getting card borders */

@@ -1,0 +1,52 @@
+.marketingBudget {
+    padding: 8rem 0;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-outfit), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    word-break: keep-all;
+}
+
+.desc {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    line-height: 1.5;
+    color: #CCCCCC;
+}
+
+.bodyText {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #aeaeae;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.red {
+    color: #FF4D4D;
+    /* Bright Red */
+    font-weight: 700;
+}
+
+.blue {
+    color: #4D79FF;
+    /* Bright Blue */
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .desc {
+        font-size: 1.2rem;
+    }
+}
