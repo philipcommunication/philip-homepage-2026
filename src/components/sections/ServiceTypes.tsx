@@ -152,7 +152,6 @@ export default function ServiceTypes() {
                                     </button>
                                 </div>
 
-                                {/* Expanded Panel */}
                                 {isActive && (
                                     <div className={styles.detailPanel}>
                                         <div className={styles.panelInner}>
@@ -160,6 +159,17 @@ export default function ServiceTypes() {
                                                 const detailData = serviceDetails.find(d => d.id === id);
                                                 return <DetailContent key={id} data={detailData} serviceId={id} />;
                                             })}
+
+                                            {/* 하단 닫기 버튼 추가 */}
+                                            <div className={styles.panelFooter}>
+                                                <button
+                                                    className={styles.pnlCloseBtn}
+                                                    onClick={() => setExpandedIds([])}
+                                                >
+                                                    상세 프로세스 닫기
+                                                    <ChevronUp size={18} />
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 )}
