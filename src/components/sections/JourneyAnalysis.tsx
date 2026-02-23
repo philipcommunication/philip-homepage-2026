@@ -1,11 +1,35 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styles from "./JourneyAnalysis.module.css";
 
 const JourneyAnalysis = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <section id="journey-analysis" className={styles.journeyAnalysis}>
+        <section id="journey-analysis" className={styles.journeyAnalysis} ref={sectionRef}>
             <div className="container">
                 <div className={styles.header}>
                     <h2 className={styles.sectionTitle}>
@@ -72,24 +96,36 @@ const JourneyAnalysis = () => {
                             ))}
 
                             {/* Connection Lines (Flow) with animated dash */}
-                            <path
-                                d="M115 90 L 285 90"
-                                stroke="#64748B"
-                                strokeWidth="2"
-                                strokeDasharray="4 4"
-                                markerEnd="url(#arrow)"
-                            >
-                                <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1s" repeatCount="indefinite" />
-                            </path>
-                            <path
-                                d="M315 90 L 480 90"
-                                stroke="#EF4444"
-                                strokeWidth="2.5"
-                                strokeDasharray="5 5"
-                                markerEnd="url(#arrowRed)"
-                            >
-                                <animate attributeName="stroke-dashoffset" from="30" to="0" dur="0.8s" repeatCount="indefinite" />
-                            </path>
+                            {isVisible && (
+                                <>
+                                    <path
+                                        d="M115 90 L 285 90"
+                                        stroke="#64748B"
+                                        strokeWidth="2"
+                                        strokeDasharray="4 4"
+                                        markerEnd="url(#arrow)"
+                                    >
+                                        <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1s" repeatCount="indefinite" />
+                                    </path>
+                                    <path
+                                        d="M315 90 L 480 90"
+                                        stroke="#EF4444"
+                                        strokeWidth="2.5"
+                                        strokeDasharray="5 5"
+                                        markerEnd="url(#arrowRed)"
+                                    >
+                                        <animate attributeName="stroke-dashoffset" from="30" to="0" dur="0.8s" repeatCount="indefinite" />
+                                    </path>
+                                </>
+                            )}
+
+                            {!isVisible && (
+                                <>
+                                    <path d="M115 90 L 285 90" stroke="#64748B" strokeWidth="2" strokeDasharray="4 4" markerEnd="url(#arrow)" />
+                                    <path d="M315 90 L 480 90" stroke="#EF4444" strokeWidth="2.5" strokeDasharray="5 5" markerEnd="url(#arrowRed)" />
+                                </>
+                            )}
+
                             <path
                                 d="M525 90 L 685 90"
                                 stroke="#CBD5E1"
@@ -98,24 +134,28 @@ const JourneyAnalysis = () => {
                             />
 
                             {/* User Flow Particles - Enhanced */}
-                            <circle r="3" fill="#F97316" filter="url(#glow)">
-                                <animateMotion path="M100 90 L 300 90" dur="4s" repeatCount="indefinite" />
-                                <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite" />
-                            </circle>
-
-                            <g className={styles.dropUsers}>
-                                {[0, 1, 2].map(n => (
-                                    <circle key={n} r="2.5" fill="#EF4444" opacity="0.8">
-                                        <animateMotion
-                                            path={`M500 90 Q ${500 + (n - 1) * 15} 120, ${505 + (n - 1) * 25} 175`}
-                                            dur={`${2 + n * 0.7}s`}
-                                            begin={`${n * 0.5}s`}
-                                            repeatCount="indefinite"
-                                        />
-                                        <animate attributeName="opacity" values="1;0" dur={`${2 + n * 0.7}s`} begin={`${n * 0.5}s`} repeatCount="indefinite" />
+                            {isVisible && (
+                                <>
+                                    <circle r="3" fill="#F97316" filter="url(#glow)">
+                                        <animateMotion path="M100 90 L 300 90" dur="4s" repeatCount="indefinite" />
+                                        <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite" />
                                     </circle>
-                                ))}
-                            </g>
+
+                                    <g className={styles.dropUsers}>
+                                        {[0, 1, 2].map(n => (
+                                            <circle key={n} r="2.5" fill="#EF4444" opacity="0.8">
+                                                <animateMotion
+                                                    path={`M500 90 Q ${500 + (n - 1) * 15} 120, ${505 + (n - 1) * 25} 175`}
+                                                    dur={`${2 + n * 0.7}s`}
+                                                    begin={`${n * 0.5}s`}
+                                                    repeatCount="indefinite"
+                                                />
+                                                <animate attributeName="opacity" values="1;0" dur={`${2 + n * 0.7}s`} begin={`${n * 0.5}s`} repeatCount="indefinite" />
+                                            </circle>
+                                        ))}
+                                    </g>
+                                </>
+                            )}
 
                             {/* Arrow Markers */}
                             <defs>

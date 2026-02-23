@@ -1,8 +1,34 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useState, useRef } from 'react';
 import { Target, Share2, BarChart3, Lightbulb, GraduationCap } from 'lucide-react';
 import styles from "./ServiceJourney.module.css";
 
 const ServiceJourney = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
     const steps = [
         { icon: <Target />, title: "공식 광고 대행", desc: "검증된 타겟팅으로 확실한 노출 점유" },
         { icon: <Share2 />, title: "바이럴 마케팅", desc: "직접 선별한 인플루언서 기반 자연스러운 확산" },
@@ -12,7 +38,7 @@ const ServiceJourney = () => {
     ];
 
     return (
-        <section className={styles.serviceJourney}>
+        <section className={styles.serviceJourney} ref={sectionRef}>
             <div className="container">
                 <div className={styles.header}>
                     <h2 className={styles.title}>Service Journey</h2>
@@ -37,16 +63,18 @@ const ServiceJourney = () => {
                                 strokeWidth="2"
                                 strokeDasharray="8 8"
                             >
-                                <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1s" repeatCount="indefinite" />
+                                {isVisible && <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1s" repeatCount="indefinite" />}
                             </path>
                             {/* Moving indicators */}
-                            <circle r="4" fill="#C5A059">
-                                <animateMotion
-                                    path="M50 60 C 250 60, 250 60, 500 60 C 750 60, 750 60, 950 60"
-                                    dur="5s"
-                                    repeatCount="indefinite"
-                                />
-                            </circle>
+                            {isVisible && (
+                                <circle r="4" fill="#C5A059">
+                                    <animateMotion
+                                        path="M50 60 C 250 60, 250 60, 500 60 C 750 60, 750 60, 950 60"
+                                        dur="5s"
+                                        repeatCount="indefinite"
+                                    />
+                                </circle>
+                            )}
                         </svg>
                     </div>
 

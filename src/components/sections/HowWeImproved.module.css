@@ -317,58 +317,58 @@
 
 @media (max-width: 768px) {
     .howWeImproved {
-        padding: 5rem 0;
+        padding: 3rem 0;
     }
 
     .header {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
 
     .sectionTitle {
-        font-size: 1.85rem;
+        font-size: 1.55rem;
         line-height: 1.3;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1rem;
     }
 
     .sectionDesc {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .grid {
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
     .card {
-        padding: 2.25rem 1.5rem;
-        border-radius: 1.5rem;
+        padding: 1.5rem 1rem;
+        border-radius: 1.25rem;
     }
 
     .cardMainTitle {
-        font-size: 1.4rem;
+        font-size: 1.15rem;
     }
 
     .categoryBadge {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
 
     .compItem,
     .compItemActive {
-        padding: 1rem;
+        padding: 0.75rem;
         min-height: auto;
     }
 
     .compText,
     .compTextActive {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
 
     .visualBox {
-        padding: 1.5rem;
-        border-radius: 1.5rem;
+        padding: 1.25rem;
+        border-radius: 1rem;
     }
 
     .resValue {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 
