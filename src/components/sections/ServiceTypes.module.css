@@ -34,12 +34,72 @@
 }
 
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
+    .serviceTypes {
+        padding: 5rem 0;
+    }
+
+    .header {
+        margin-bottom: 3.5rem;
     }
 
     .sectionTitle {
-        font-size: 2.2rem;
+        font-size: 1.85rem;
+    }
+
+    .sectionDesc {
+        font-size: 0.95rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 2.25rem 1.5rem;
+    }
+
+    .cardNumber {
+        font-size: 2.25rem;
+    }
+
+    .cardTitle {
+        font-size: 1.35rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .problemText {
+        white-space: normal;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .solutionText {
+        font-size: 1.1rem;
+    }
+
+    .detailPanel {
+        padding: 2.5rem 1.25rem;
+        border-radius: 1.5rem;
+    }
+
+    .panelInner {
+        gap: 3rem;
+    }
+
+    .introTitle {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+
+    .introDesc {
+        font-size: 0.95rem;
+    }
+
+    .stepItem {
+        padding: 1.5rem;
+        border-radius: 1.25rem;
     }
 }
 

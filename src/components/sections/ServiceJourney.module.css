@@ -146,3 +146,53 @@
         gap: 0;
     }
 }
+
+@media (max-width: 768px) {
+    .serviceJourney {
+        padding: 5rem 0;
+    }
+
+    .header {
+        margin-bottom: 3rem;
+    }
+
+    .title {
+        font-size: 1.85rem;
+    }
+
+    .desc {
+        font-size: 1rem;
+    }
+
+    .timelineContainer {
+        margin-top: 3rem;
+        padding: 0 1rem;
+    }
+
+    .stepsWrapper {
+        gap: 2rem;
+    }
+
+    .iconCircle {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .stepBadge {
+        width: 20px;
+        height: 20px;
+        font-size: 0.65rem;
+    }
+
+    .stepTitle {
+        font-size: 1.15rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .stepDesc {
+        font-size: 0.9rem;
+        max-width: 100%;
+        line-height: 1.5;
+    }
+}

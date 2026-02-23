@@ -288,19 +288,53 @@
 }
 
 @media (max-width: 768px) {
+    .services {
+        padding: 5rem 0;
+    }
+
+    .header {
+        margin-bottom: 3rem;
+    }
+
     .sectionTitle {
-        font-size: 2.25rem;
+        font-size: 1.85rem;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+    }
+
+    .keywordItem {
+        min-width: 120px;
+        padding: 0.5rem 1.2rem;
     }
 
     .visualizationWrapper {
+        padding: 2.5rem 1.25rem;
         border-radius: 1.5rem;
     }
 
+    .compCol {
+        gap: 2rem;
+    }
+
+    .valueLarge {
+        font-size: 1.5rem;
+    }
+
+    .impactBadge,
+    .impactBadgeHighlight {
+        font-size: 0.8rem;
+    }
+
     .statusInner {
-        font-size: 1.1rem;
-        padding: 1.25rem 2rem;
-        border-radius: 2rem;
+        font-size: 1rem;
+        padding: 1.25rem 1.5rem;
+        border-radius: 1.5rem;
         width: 100%;
         text-align: center;
+        line-height: 1.4;
+    }
+
+    .impactText {
+        font-size: 1.2rem;
     }
 }
