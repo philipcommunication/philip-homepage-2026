@@ -114,27 +114,6 @@
     color: var(--accent);
 }
 
-.versionSwitcher {
-    display: flex;
-    gap: 0.5rem;
-    background: rgba(0, 0, 0, 0.05);
-    padding: 0.3rem;
-    border-radius: 50px;
-}
-
-.versionBtn {
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: #666;
-    transition: all 0.2s ease;
-}
-
-.versionBtn:hover {
-    background: #fff;
-    color: var(--accent);
-}
 
 .contactBtn {
     background: #f97316;
