@@ -1,9 +1,36 @@
+"use client";
+
+import { useEffect, useState, useRef } from "react";
 import styles from "./Services.module.css";
 import { ArrowRight } from "lucide-react";
 
 export default function Services() {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
     return (
-        <section id="services" className={styles.services}>
+        <section id="services" className={styles.services} ref={sectionRef}>
             <div className="container">
                 <div className={styles.header}>
                     <h2 className={styles.sectionTitle}>
@@ -39,7 +66,10 @@ export default function Services() {
                                     <span className={styles.value}>500만원</span>
                                 </div>
                                 <div className={styles.barTrack}>
-                                    <div className={`${styles.barFill} ${styles.bgGrey}`} style={{ width: '100%' }}></div>
+                                    <div
+                                        className={`${styles.barFill} ${styles.bgGrey}`}
+                                        style={{ width: isVisible ? '100%' : '0%' }}
+                                    ></div>
                                 </div>
                             </div>
 
@@ -49,7 +79,10 @@ export default function Services() {
                                     <span className={styles.value}>250%</span>
                                 </div>
                                 <div className={styles.barTrack}>
-                                    <div className={`${styles.barFill} ${styles.bgGrey}`} style={{ width: '50%' }}></div>
+                                    <div
+                                        className={`${styles.barFill} ${styles.bgGrey}`}
+                                        style={{ width: isVisible ? '50%' : '0%' }}
+                                    ></div>
                                 </div>
                             </div>
                         </div>
@@ -68,21 +101,31 @@ export default function Services() {
 
                             <div className={styles.barGroup}>
                                 <div className={styles.barLabel}>
-                                    <span className={styles.impact}>예산 40% 절감</span>
-                                    <span className={styles.value}>300만원</span>
+                                    <div className={styles.impactBadge}>예산 40% 절감</div>
+                                    <span className={styles.valueLarge}>300만원</span>
                                 </div>
                                 <div className={styles.barTrack}>
-                                    <div className={`${styles.barFill} ${styles.bgGold}`} style={{ width: '60%' }}></div>
+                                    <div
+                                        className={`${styles.barFill} ${styles.bgGold}`}
+                                        style={{ width: isVisible ? '60%' : '0%' }}
+                                    >
+                                        <div className={styles.shimmer}></div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className={styles.barGroup}>
                                 <div className={styles.barLabel}>
-                                    <span className={styles.impact}>성과 44% 향상</span>
-                                    <span className={styles.value}>360%</span>
+                                    <div className={styles.impactBadgeHighlight}>성과 44% 향상</div>
+                                    <span className={styles.valueLarge}>360%</span>
                                 </div>
                                 <div className={styles.barTrack}>
-                                    <div className={`${styles.barFill} ${styles.bgOrange}`} style={{ width: '72%' }}></div>
+                                    <div
+                                        className={`${styles.barFill} ${styles.bgOrange}`}
+                                        style={{ width: isVisible ? '72%' : '0%' }}
+                                    >
+                                        <div className={styles.shimmer}></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +133,7 @@ export default function Services() {
 
                     <div className={styles.statusCard}>
                         <div className={styles.statusInner}>
-                            적은 예산으로도 <span className={styles.impact}>더 높은 성과</span>를 만드는 것이 필립의 실력입니다.
+                            적은 예산으로도 <span className={styles.impactText}>더 높은 성과</span>를 만드는 것이 필립의 실력입니다.
                         </div>
                     </div>
                 </div>

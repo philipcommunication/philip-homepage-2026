@@ -152,7 +152,7 @@
 }
 
 .barTrack {
-    height: 16px;
+    height: 24px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 99px;
     overflow: hidden;
@@ -163,21 +163,88 @@
 .barFill {
     height: 100%;
     border-radius: 99px;
-    transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transform: translateX(-100%);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .bgGrey {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .bgOrange {
     background: linear-gradient(90deg, #F97316, #FB923C);
-    box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
 }
 
 .bgGold {
     background: linear-gradient(90deg, #FDBA74, #FED7AA);
-    box-shadow: 0 0 20px rgba(253, 186, 116, 0.4);
+    box-shadow: 0 0 30px rgba(253, 186, 116, 0.5);
+}
+
+/* Impact Badge Styling */
+.impactBadge,
+.impactBadgeHighlight {
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    letter-spacing: -0.01em;
+    display: inline-block;
+}
+
+.impactBadge {
+    background: rgba(253, 186, 116, 0.2);
+    color: #FDBA74;
+    border: 1px solid rgba(253, 186, 116, 0.3);
+}
+
+.impactBadgeHighlight {
+    background: rgba(249, 115, 22, 0.2);
+    color: #F97316;
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    animation: pulseBorder 2s infinite;
+}
+
+@keyframes pulseBorder {
+    0% {
+        border-color: rgba(249, 115, 22, 0.3);
+    }
+
+    50% {
+        border-color: rgba(249, 115, 22, 0.8);
+    }
+
+    100% {
+        border-color: rgba(249, 115, 22, 0.3);
+    }
+}
+
+.valueLarge {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
 }
 
 .statusCard {
@@ -197,9 +264,12 @@
     letter-spacing: -0.01em;
 }
 
-.impact {
+.impactText {
     color: #F97316;
-    font-weight: 800;
+    font-weight: 900;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 @media (max-width: 1024px) {

@@ -61,6 +61,16 @@ export default function Header() {
                             <Link href="/collaboration/agency" className={styles.dropdownItem}>대행사/실행사 협업</Link>
                         </div>
                     </div>
+                    <div className={styles.versionSwitcher}>
+                        <button
+                            onClick={() => window.dispatchEvent(new CustomEvent('heroVersionChange', { detail: 1 }))}
+                            className={styles.versionBtn}
+                        >V1</button>
+                        <button
+                            onClick={() => window.dispatchEvent(new CustomEvent('heroVersionChange', { detail: 2 }))}
+                            className={styles.versionBtn}
+                        >V2</button>
+                    </div>
                     <Link href="/#contact" id="btn-contact-header" className={styles.contactBtn}>문의하기</Link>
                 </nav>
 

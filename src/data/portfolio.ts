@@ -11,7 +11,7 @@ export const portfolioItems = [
     { id: 10, name: "FLO", category: "바이럴광고 대행", img: "/portfolio/7.png" },
     { id: 11, name: "Humanscape", category: "바이럴광고 대행", img: "/portfolio/8.png" },
     { id: 12, name: "피지컬갤러리", category: "공식광고 대행", img: "/portfolio/9.png" },
-    { id: 13, name: "헬스핼퍼", category: "바이럴광고 대행", img: "/portfolio/10.png" },
+    { id: 13, name: "헬스헬퍼", category: "바이럴광고 대행", img: "/portfolio/10.png" },
     { id: 14, name: "템플레깅스", category: "바이럴광고 대행", img: "/portfolio/11.png" },
     { id: 15, name: "아스모디", category: "바이럴광고 대행", img: "/portfolio/17.png" },
 ];

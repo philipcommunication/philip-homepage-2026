@@ -1,7 +1,6 @@
 .serviceJourney {
     padding: 8rem 0;
-    background: #F8F7F2;
-    /* Ivory Background */
+    background: #FFFFFF;
 }
 
 .header {
@@ -26,17 +25,36 @@
 .timelineContainer {
     position: relative;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 4rem auto 0;
 }
 
-.line {
+.svgWrapper {
     display: none;
+}
+
+@media (min-width: 768px) {
+    .svgWrapper {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        z-index: 0;
+    }
+
+    .flowSvg {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .stepsWrapper {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    position: relative;
+    z-index: 10;
 }
 
 .stepItem {
@@ -44,78 +62,83 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    position: relative;
-    z-index: 10;
-    width: 100%;
+    flex: 1;
 }
 
 .iconCircle {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
     background-color: #FFFFFF;
-    border: 2px solid #C5A059;
-    /* Gold border */
+    border: 1px solid rgba(197, 160, 89, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #C5A059;
-    margin-bottom: 1.5rem;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    position: relative;
+}
+
+.stepBadge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 24px;
+    height: 24px;
+    background: #0D1B2A;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FFFFFF;
 }
 
 .stepItem:hover .iconCircle {
     background-color: #C5A059;
     color: #FFFFFF;
-    transform: scale(1.1);
-    box-shadow: 0 20px 25px -5px rgba(197, 160, 89, 0.3);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(197, 160, 89, 0.2);
+    border-color: #C5A059;
+}
+
+.stepItem:hover .stepBadge {
+    background: #EF4444;
 }
 
 .stepNumber {
     font-family: var(--font-outfit), sans-serif;
-    font-size: 0.9rem;
-    font-weight: 800;
+    font-size: 0.8rem;
+    font-weight: 900;
     color: #EF4444;
-    /* Red for high visibility */
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .stepTitle {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.35rem;
+    font-weight: 800;
     color: #0D1B2A;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
 }
 
 .stepDesc {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #64748B;
-    max-width: 220px;
+    max-width: 200px;
     margin: 0 auto;
-    line-height: 1.5;
+    line-height: 1.6;
     word-break: keep-all;
+    font-weight: 500;
 }
 
 @media (min-width: 768px) {
-    .title {
-        font-size: 3rem;
-    }
-
-    .line {
-        display: block;
-        position: absolute;
-        top: 2.75rem;
-        /* Center of the 5.5rem circle */
-        left: 5%;
-        width: 90%;
-        height: 1px;
-        background-color: rgba(197, 160, 89, 0.3);
-        /* Dotted or solid gold line */
-        z-index: 0;
-    }
-
     .stepsWrapper {
         flex-direction: row;
         justify-content: space-between;

@@ -12,7 +12,7 @@ const ServiceJourney = () => {
     ];
 
     return (
-        <section className={`${styles.serviceJourney} v7-ivory-section`}>
+        <section className={styles.serviceJourney}>
             <div className="container">
                 <div className={styles.header}>
                     <h2 className={styles.title}>Service Journey</h2>
@@ -20,15 +20,42 @@ const ServiceJourney = () => {
                 </div>
 
                 <div className={styles.timelineContainer}>
-                    {/* Connecting Line (Desktop) */}
-                    <div className={styles.line} />
+                    {/* SVG Flow Path for Desktop */}
+                    <div className={styles.svgWrapper}>
+                        <svg viewBox="0 0 1000 120" className={styles.flowSvg}>
+                            <defs>
+                                <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stopColor="#C5A059" stopOpacity="0.2" />
+                                    <stop offset="50%" stopColor="#C5A059" stopOpacity="0.8" />
+                                    <stop offset="100%" stopColor="#C5A059" stopOpacity="0.2" />
+                                </linearGradient>
+                            </defs>
+                            <path
+                                d="M50 60 C 250 60, 250 60, 500 60 C 750 60, 750 60, 950 60"
+                                fill="none"
+                                stroke="url(#flowGrad)"
+                                strokeWidth="2"
+                                strokeDasharray="8 8"
+                            >
+                                <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1s" repeatCount="indefinite" />
+                            </path>
+                            {/* Moving indicators */}
+                            <circle r="4" fill="#C5A059">
+                                <animateMotion
+                                    path="M50 60 C 250 60, 250 60, 500 60 C 750 60, 750 60, 950 60"
+                                    dur="5s"
+                                    repeatCount="indefinite"
+                                />
+                            </circle>
+                        </svg>
+                    </div>
 
                     <div className={styles.stepsWrapper}>
                         {steps.map((step, index) => (
                             <div key={index} className={styles.stepItem}>
                                 <div className={styles.iconCircle}>
-                                    {/* Size prop is supported by LucideReact icons */}
                                     {React.cloneElement(step.icon as React.ReactElement<any>, { size: 32 })}
+                                    <span className={styles.stepBadge}>{index + 1}</span>
                                 </div>
                                 <h3 className={styles.stepNumber}>Service 0{index + 1}</h3>
                                 <h4 className={styles.stepTitle}>{step.title}</h4>
