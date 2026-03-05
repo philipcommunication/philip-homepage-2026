@@ -13,7 +13,7 @@ export default function Contact() {
                     <div className={styles.links}>
                         <a href={siteConfig.links.instagram} id="btn-contact-insta" className={styles.linkItem} target="_blank" rel="noopener noreferrer">
                             <span className={styles.icon}>
-                                <Image src="/instaicon.png" alt="Instagram" width={48} height={48} unoptimized />
+                                <Image src="/instaicon.png" alt="Instagram" width={48} height={48} />
                             </span>
                         </a>
                         <a href={`tel:${siteConfig.phone}`} id="btn-contact-phone" className={styles.linkItem}>
@@ -21,7 +21,7 @@ export default function Contact() {
                         </a>
                         <a href={siteConfig.links.kakao} id="btn-contact-kakao" className={styles.linkItem} target="_blank" rel="noopener noreferrer">
                             <span className={styles.icon}>
-                                <Image src="/kakaoicon.png" alt="KakaoTalk" width={48} height={48} unoptimized />
+                                <Image src="/kakaoicon.png" alt="KakaoTalk" width={48} height={48} />
                             </span>
                         </a>
                     </div>

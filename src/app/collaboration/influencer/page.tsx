@@ -26,7 +26,6 @@ export default function InfluencerPage() {
                                     fill
                                     style={{ objectFit: "cover" }}
                                     className={`${styles.img} ${!collab.isActive ? styles.disabledImage : ""}`}
-                                    unoptimized
                                 />
                             </div>
                             <div className={styles.textBox}>

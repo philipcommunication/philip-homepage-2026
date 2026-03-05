@@ -42,7 +42,6 @@ export default function AboutPage() {
                                 width={600}
                                 height={200}
                                 style={{ objectFit: 'contain' }}
-                                unoptimized
                             />
                         </div>
                         <p className={styles.ciDesc}>필립의 CI는 '브랜드'와 '바른 성장'의 결합을 상징합니다. 브랜드를 반드시(必) 일으켜 세운다(立)라는 사명과 골드와 네이비의 조화는 신뢰와 프리미엄 가치를 나타냅니다.</p>

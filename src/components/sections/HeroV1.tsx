@@ -48,17 +48,16 @@ export default function Hero() {
                     <div className={`${styles.imageWrapper} heroImage`}>
                         <Image
                             src={slide.image}
-                            alt="Philip Data Marketing"
+                            alt={slide.subTitle} // More descriptive alt
                             fill
                             style={{ objectFit: "cover" }}
-                            priority
-                            unoptimized
+                            priority={index === 0} // Only first slide gets priority
                         />
                         <div className={styles.overlay}></div>
                     </div>
 
-                    <div className={`container ${styles.content}`}>
-                        <h2 className={styles.subTitle}>{slide.subTitle}</h2>
+                    <div className={`${styles.content} container`}>
+                        <p className={styles.subTitle}>{slide.subTitle}</p>
                         <h1 className={styles.mainTitle}>
                             {slide.mainTitle.split('\n').map((line, i) => (
                                 <span key={i}>{line}<br /></span>
@@ -77,7 +76,6 @@ export default function Hero() {
                                     width={30}
                                     height={30}
                                     className={styles.avatarImage}
-                                    unoptimized
                                 />
                             </div>
                             <p>
@@ -88,7 +86,6 @@ export default function Hero() {
                                     width={60}
                                     height={24}
                                     className={styles.inlineLogo}
-                                    unoptimized
                                 />
                                 입니다.
                             </p>
@@ -103,6 +100,7 @@ export default function Hero() {
                         key={index}
                         className={`${styles.indicator} ${index === currentSlide ? styles.activeIndicator : ""}`}
                         onClick={() => setCurrentSlide(index)}
+                        aria-label={`${index + 1}번 슬라이드로 이동`}
                     />
                 ))}
             </div>
