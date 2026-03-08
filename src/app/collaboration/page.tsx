@@ -20,7 +20,7 @@ export default function CollaborationPage() {
                     {collaborations.map((collab, index) => (
                         <div key={collab.id} className={`${styles.collabItem} ${index % 2 === 1 ? styles.reverse : ""}`}>
                             <div className={styles.imageBox}>
-                                <Image src={collab.image} alt={collab.title} fill style={{ objectFit: "cover" }} className={styles.img} />
+                                <Image src={collab.image} alt={collab.title} fill style={{ objectFit: "cover" }} className={styles.img} sizes="(max-width: 968px) 100vw, 600px" />
                             </div>
                             <div className={styles.textBox}>
                                 <h2 className={styles.itemTitle}>{collab.title}</h2>

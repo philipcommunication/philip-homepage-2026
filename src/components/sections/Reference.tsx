@@ -29,6 +29,7 @@ export default function Reference() {
                                         alt={item.name}
                                         fill
                                         style={{ objectFit: "cover" }}
+                                        sizes="(max-width: 768px) 180px, 380px"
                                     />
                                     <div className={styles.cardOverlay}>
                                         <span className={styles.category}>{item.category}</span>
@@ -51,6 +52,7 @@ export default function Reference() {
                                         alt={item.name}
                                         fill
                                         style={{ objectFit: "cover" }}
+                                        sizes="(max-width: 768px) 180px, 380px"
                                     />
                                     <div className={styles.cardOverlay}>
                                         <span className={styles.category}>{item.category}</span>

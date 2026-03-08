@@ -14,7 +14,7 @@ export default function Header() {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
         };
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
@@ -43,6 +43,7 @@ export default function Header() {
                                 height={40}
                                 className={styles.logoImage}
                                 priority
+                                sizes="120px"
                             />
                         </div>
                     </Link>

@@ -64,6 +64,7 @@ export default function AboutPage() {
                                     allowFullScreen={true}
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
+                                    title="필립 위치 지도"
                                 ></iframe>
                             </div>
 

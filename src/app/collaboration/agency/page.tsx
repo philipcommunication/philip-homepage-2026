@@ -26,6 +26,7 @@ export default function AgencyPage() {
                                     fill
                                     style={{ objectFit: "cover" }}
                                     className={`${styles.img} ${!collab.isActive ? styles.disabledImage : ""}`}
+                                    sizes="(max-width: 968px) 100vw, 600px"
                                 />
                             </div>
                             <div className={styles.textBox}>

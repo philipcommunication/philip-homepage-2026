@@ -52,6 +52,7 @@ export default function Hero() {
                             fill
                             style={{ objectFit: "cover" }}
                             priority={index === 0} // Only first slide gets priority
+                            sizes="100vw"
                         />
                         <div className={styles.overlay}></div>
                     </div>
@@ -76,6 +77,7 @@ export default function Hero() {
                                     width={30}
                                     height={30}
                                     className={styles.avatarImage}
+                                    sizes="30px"
                                 />
                             </div>
                             <p>
@@ -86,6 +88,7 @@ export default function Hero() {
                                     width={60}
                                     height={24}
                                     className={styles.inlineLogo}
+                                    sizes="60px"
                                 />
                                 입니다.
                             </p>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Outfit, Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 
@@ -12,6 +12,12 @@ const notoNS = Noto_Sans_KR({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#f97316",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.philip.kr"), // 도메인에 맞게 수정

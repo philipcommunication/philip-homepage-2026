@@ -74,6 +74,7 @@ export default function WhyPhilip() {
                             width={100}
                             height={40}
                             className={styles.titleLogo}
+                            sizes="100px"
                         />
                         이어야 할까요?
                     </h2>
