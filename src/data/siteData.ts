@@ -250,7 +250,7 @@ export const influencerCollabs = [
         id: 0,
         title: "Talitha Koum 인플루언서 협업",
         description: "네이버/인스타그램 협업 인플루언서 모집",
-        image: "/portfolio/thalitha_koum.png",
+        image: "/portfolio/talitha_koum.png",
         isActive: true,
         link: "https://forms.gle/936KUs4ypTg1apqt9",
         buttonText: "신청하기"
