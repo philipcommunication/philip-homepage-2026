@@ -247,6 +247,15 @@ export const companyHistory = [
 // 인플루언서 협업 데이터
 export const influencerCollabs = [
     {
+        id: 0,
+        title: "Talitha Koum 인플루언서 협업",
+        description: "네이버/인스타그램 협업 인플루언서 모집",
+        image: "/portfolio/talitha_koum.png", // 업로드하실 이미지 파일명에 맞게 수정해 주세요.
+        isActive: true,
+        link: "https://forms.gle/936KUs4ypTg1apqt9",
+        buttonText: "신청하기"
+    },
+    {
         id: 1,
         title: "두나무 인플루언서 협업",
         description: "네이버/인스타그램 협업 인플루언서 모집",
